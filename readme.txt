@@ -6,3 +6,8 @@ With this mini project, I learned how to:
 - persist a login session as long as node.js server is running
 - use ejs templates
 
+The full project is below
+https://dokku.memberssonly.xyz/
+
+Domain registrar used: epik
+Hosted on: digital ocean droplet
