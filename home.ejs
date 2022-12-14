@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Index page!</h1>
+
+  <% if (locals.currentUser) {%>
+    <h1>Here are the top secret files</h1> %>
+    <%=secretFiles[0].name%> 
+    <%=secretFiles[0].content%>
+    <br>
+    <%=secretFiles[1].name%> 
+    <%=secretFiles[1].content%>
+
+    <a href="/log-out">LOG OUT</a>
+    <% } %>
+
+</body>
+
+</html>

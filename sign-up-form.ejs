@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Sign Up</h1>
+  <div class="error">
+    <% if (errorMessage) { %>
+      <div>
+        <%=errorMessage%>
+      </div>
+      <% } %>
+  </div>
+  <form name="signUpForm" action="" method="POST" onsubmit="return validateForm()">
+    <label for="name">Name: </label>
+    <input name="name" type="text" />
+    <br>
+
+
+    <label for="username">Username: </label>
+    <input name="username" type="text" required />
+    <br>
+    <label for="password">Password: </label>
+    <input id="pass" name="password" type="password" required />
+    <br>
+    <label for="cpassword">Confirm Password: </label>
+    <input id="cpass" name="cpassword" type="password" required />
+    <br>
+
+    <label for="adminkey">Admin Key (optional): </label>
+    <input id="adminkey" name="adminKey" type="text">
+
+    <br>
+
+
+    <button>Sign Up</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let pass = document.getElementById("pass").value
+      let cpass = document.getElementById("cpass").value
+
+      if (pass != cpass) {
+        alert("Passwords must match")
+        return false
+      }
+      return true
+    }
+  </script>
+</body>
+
+</html>
