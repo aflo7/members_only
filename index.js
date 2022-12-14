@@ -63,6 +63,7 @@ const posts = [
 const app = express()
 app.set("views", __dirname)
 app.set("view engine", "ejs")
+app.set('trust_proxy', 1)
 
 passport.use(
   new LocalStrategy((username, password, done) => {
