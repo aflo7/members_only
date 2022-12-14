@@ -1,0 +1,4 @@
+hostname
+membersonlydroplet
+
+http://membersonlydroplet:<app-port>
