@@ -4,6 +4,12 @@ const session = require("express-session")
 const passport = require("passport")
 const LocalStrategy = require("passport-local").Strategy
 require('dotenv').config()
+var cors = require('cors')
+
+app.use(cors({
+  origin: 'https://app2.memberssonly.xyz'
+}));
+
 
 const users = [
   {
@@ -138,6 +144,10 @@ app.use(function (req, res, next) {
   next()
 })
 
+app.get("/hello", (req,res) => {
+
+  return res.json({hello: 'world'})
+})
 app.get("/", (req, res) => {
   let output = ""
 
