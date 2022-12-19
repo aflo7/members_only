@@ -6,10 +6,6 @@ const LocalStrategy = require("passport-local").Strategy
 require('dotenv').config()
 var cors = require('cors')
 
-app.use(cors({
-  origin: 'https://app2.memberssonly.xyz'
-}));
-
 
 const users = [
   {
@@ -67,6 +63,9 @@ const posts = [
 ]
 
 const app = express()
+app.use(cors({
+  origin: 'https://app2.memberssonly.xyz',credentials: true
+}));
 app.set("views", __dirname)
 app.set("view engine", "ejs")
 app.set('trust_proxy', 1)
